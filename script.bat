@@ -4,6 +4,7 @@ SET SPRING_BOOT_APP=
 
 rem Building React app
 cd %REACT_APP%
+CALL npm install
 CALL npm run build
 
 rem Copying React build files to Spring Boot project. Spring Boot serves content in \src\main\resources\public by default.
