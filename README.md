@@ -19,7 +19,7 @@ xcopy "%REACT_APP%\build\*" "%SPRING_BOOT_APP%\src\main\resources\public\*" /s /
 
 rem Compile Spring Boot application using Maven
 cd "%SPRING_BOOT_APP%"
-CALL mvn package
+CALL mvn clean package
 
 rem As React build files change everytime we build the react app, we should not keep them in our Spring Boot project. Removing:
 rmdir /s /q  "%SPRING_BOOT_APP%\src\main\resources\public"
